@@ -8,6 +8,7 @@ To install this project on your computer or server, you can follow this instruct
 
 ```bash
 $ git clone https://github.com/ArRosid/todo_api.git
+$ cd todo_api
 ```
 #### 2. Create virtual environment and install requirements
 ```bash
@@ -78,9 +79,12 @@ Now we are ready. You can try to run the project
 ```bash
 $ python manage.py runserver 0.0.0.0:8000
 ```
-Open your browser and go to [http://your_ip:8000/admin](http://your_ip:8000/admin) and login using user & password that you have created
+Open your browser and go to [http://your_ip:8000/admin](http://your_ip:8000/admin) and login using user & password that you have created.
+
+If you just want to run this project in development environment, you are done here. You can jump to the **Testing Section** to test the project.
+
 #### 9. Create systemd socket & service for gunicorn
-If you just want to run this project in development environment, you are done in step 8. But if you want deploy this project in production, you need to do this step
+If you want to deploy this project in production, you need to do this step
 ```bash
 $ sudo nano /etc/systemd/system/todoapi.socket
 [Unit]
@@ -247,4 +251,5 @@ $ curl -X DELETE -H "Authorization: Bearer access_token" http://todoapi.arrosid.
 ```
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+
